@@ -21,9 +21,12 @@ class School
     end
 
     def sort
-        @roster.map do |grade, students|
+        # grade like [9, ['brit', 'danny']]
+
+        # grade like 9
+        # students like ['brit', 'danny', 'nick']
+        @roster.each do |grade, students|
             @roster[grade] = students.sort
         end
-        @roster
     end
 end
